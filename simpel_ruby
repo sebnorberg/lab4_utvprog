@@ -1,0 +1,47 @@
+puts "Vad heter du?"
+name = gets.chomp
+puts "Hej #{name}!"
+
+puts "Välj ett heltal mellan 1 och 10:"
+number = gets.chomp.to_i
+
+if number < 1 || number > 10
+  puts "Ogiltigt val, programmet avslutas."
+  exit
+end
+
+puts "Beräkna summan av talen från 1 till #{number}."
+sum = 0
+for i in 1..number do
+  sum += i
+end
+puts "Summan är #{sum}."
+
+puts "Rita en triangel med höjden #{number}."
+for i in 1..number do
+  for j in 1..i do
+    print "*"
+  end
+  puts ""
+end
+
+puts "Rita en kvadrat med sidan #{number}."
+for i in 1..number do
+  for j in 1..number do
+    print "*"
+  end
+  puts ""
+end
+
+puts "Vilket är ditt favoritdjur?"
+animal = gets.chomp.downcase
+
+if animal == "katt"
+  puts "Mjau!"
+elsif animal == "hund"
+  puts "Voff!"
+elsif animal == "fisk"
+  puts "Blubb!"
+else
+  puts "Jag känner inte igen det djuret."
+end
